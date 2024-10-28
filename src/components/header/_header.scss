@@ -1,0 +1,181 @@
+#header__section{
+    background-color: $orange__color;
+    padding: 10px;
+
+    #header__lg{
+        #logo__box{
+            img{
+                width: 120px;
+                /* ==== Responsive Device ==== */
+                @include device__xsm{
+                    width: 90px;
+                }
+            }
+        }
+        #primary__menu__box{
+            .primary__menu{
+                @include display__flex($a__items:center,$j__content:center);
+                .primary__menu__item{
+                    padding: 5px 10px;
+                    font-size: 16px;
+                    line-height: 28px;
+                    font-weight: 600;
+                    font-family: $b__font;
+                    color: $white__color;
+                    margin: 0 3px;
+
+    
+                    &:hover{
+                        @include hover($color:$orange__color,$bg__color:$white__color)
+                    }
+                }
+            }
+        }
+        #right__menu__box{
+            .right__menu{
+                @include display__flex($a__items:center,$j__content:end);
+                gap: 5px;
+                .right__menu__item{
+                    @include icon__lg($color:$white__color,$b__color:$white__color);
+                    &:hover{@include hover($color:$orange__color,$bg__color:$white__color)
+                    }
+                }
+            }
+        }
+        #nav__toggle__box{
+            margin-left: auto;
+            @include display__flex($j__content:end);
+            #nav__toggle__btn{
+                @include icon__lg($color:$white__color,$b__color:$white__color);
+                    &:hover{@include hover($color:$orange__color,$bg__color:$white__color)
+                    }
+            }
+        }
+    }
+    #header__sidebar{
+        position: absolute;
+        left: 0;;
+        top: 0;
+        height: 100vh;
+        background-color: $orange__color;
+        width: 0%;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: 1s;
+        #header__sidebar__top{
+            position: relative;
+            height: 20vh;
+            background-color: $white__color;
+            text-align: center;
+            .sidebar__logo{
+                max-width: 130px;
+                margin: 30px auto;
+                img{
+                    width: 100%;
+                height: 50px;
+                }
+            }
+          .close__btn{
+            @include icon__sm($color:$orange__color,$bg__color:$white__color,$b__color:$orange__color,$b__radius:50%);
+            position: absolute;
+            right: 10px;
+            top:10px;
+            &:hover{
+                @include hover($color:$white__color,$bg__color:$orange__color)
+            }
+          }
+        }
+        #sidebar__content{
+        overflow-y: scroll;
+        height: 80vh;
+        #header__sidebar__middle{
+            margin: 30px 30px ;
+            #form__search{
+                background-color: $white__color;
+                border-radius: 30px;
+                margin-bottom: 30px;
+                padding: 3px;
+                @include display__flex;
+                input{width: 100%;
+                font-size: 16px;
+                line-height: 20px;
+                padding: 5px 20px ;
+                color: $heading__color;
+                border-radius: 30px 0  0 30px;
+                }
+                button{
+                    @include btn__xsm($bg__color:$white__color,$b__radius: 30px ,$color:$orange__color,$b__color:$orange__color,$l__height:20px,$padding:5px 20px);
+                    &:hover{
+                        @include hover($bg__color:$orange__color,$color:$white__color);
+                        border-color: $white__color;
+                    }
+                }
+            }
+            #header__sidebar__menu{
+                border: 1px solid $white__color;
+                .primary__sidebar__item{
+                    border: 1px solid $white__color;
+                    a{
+                        padding:5px 20px ;
+                        color:$white__color;
+                        font-weight: 500;
+                        width: 100%;
+                        font-size: 16px;
+                        font-family: $b__font;
+                        line-height: 28px;
+                        &:hover{
+                            @include hover($color:$orange__color,$bg__color:$white__color)
+                        }
+                    }
+                }
+            }
+        }
+        #header__sidebar__bottom{
+            margin-bottom: 100px;
+            border-top: 3px solid $white__color;
+            #header__sidebar_dashboard{
+                margin: 30px;
+
+                .dashboard__sidebar__item{
+                    border-bottom: 1px solid $white__color;
+                    a{
+                        width: 100%;
+                        @include display__flex($a__items:center,$j__content:space-between);
+                        font-size: 16px;
+                        padding: 5px 10px;
+                        font-family: $b__font;
+                        font-weight: 500;
+                        color: $white__color;
+                        .dashboard__item{
+                            @include display__flex($display:inline-flex,$a__items:center);
+                            i{@include icon__xsm($f__size:16px,$width:20px,$height:20px);
+                            }
+                            .name{margin-left: 10px;
+                            line-height: 28px;}
+                        }
+                        .item__badge{
+                            @include display__flex($a__items:center,$j__content:center);
+                            background-color: transparent !important;
+                            border: 1px solid $white__color;
+                            border-radius: 50%;
+                        }
+                        &:hover{
+                            @include hover($color:$orange__color,$bg__color:$white__color);
+                            i{color:$orange__color;}
+                            .item__badge{
+                                color: $orange__color !important;
+                                border-color: $orange__color;;
+                            }
+                        }
+                    }
+                }
+            }
+        }}
+    }
+    #header__sidebar.active{
+        width:280px;
+        transform: scaleX(1);
+        transition: 1s;
+    }
+    
+}
