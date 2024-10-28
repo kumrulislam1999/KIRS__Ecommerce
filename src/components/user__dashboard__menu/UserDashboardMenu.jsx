@@ -30,7 +30,6 @@ import { IoCameraSharp } from "react-icons/io5";
  ========================================*/
 
 
-
  const user__menu = [
   {
     name : "Dashboard",
@@ -38,7 +37,6 @@ import { IoCameraSharp } from "react-icons/io5";
     icon : MdDashboard,
   },
   {
-    name : "Profile",
     path : "/user-profile",
     icon : FaUser,
   },
