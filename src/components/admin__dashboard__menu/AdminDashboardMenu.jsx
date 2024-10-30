@@ -15,7 +15,11 @@ import { FaStar } from "react-icons/fa";
 import { MdDashboard } from "react-icons/md";
 import { RiLogoutCircleLine } from "react-icons/ri";
 import { IoCameraSharp } from "react-icons/io5";
-
+import { FaProductHunt } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa6";
+import { RiEdit2Fill } from "react-icons/ri";
+import { IoMdCreate } from "react-icons/io";
+import { MdGroups } from "react-icons/md";
 /* ========================================
       End Import React Icons Here 
  ========================================*/
@@ -38,12 +42,23 @@ import { IoCameraSharp } from "react-icons/io5";
   },
   {
     name: "Profile",
-    path : "/user-profile",
+    path : "/admin-profile",
     icon : FaUser,
   },
   {
-    name : "Orders",
-    path : "/orders",
+    name : "Products",
+    path : "/all-products",
+    icon : FaProductHunt,
+  },
+  {
+    name : "Create Product",
+    path : "/create-product",
+    icon : FaProductHunt,
+    eicon : FaPlus
+  },
+  {
+    name : "All Orders",
+    path : "/all-orders",
     icon : FaShopify,
   },
   {
@@ -52,15 +67,20 @@ import { IoCameraSharp } from "react-icons/io5";
     icon : MdLocalShipping,
   },
   {
+    name : "Review",
+    path : "/review",
+    icon : FaStar,
+  },
+  {
     name : "Logout",
     path : "#",
     icon : RiLogoutCircleLine,
   }
  ];
 
-const UserDashboardMenu = () => {
+const AdminDashboardMenu = () => {
   return (
-    <div id='user__dashboard__menu'>
+    <div id='admin__dashboard__menu'>
       <div id="dashboard__box">
         <div id="profile__box">
           <div id="img__box">
@@ -74,15 +94,15 @@ const UserDashboardMenu = () => {
           </div>
           <div id="profile__info">
               <h6>Maria Smith</h6>
-              <p className='position'>User</p>
+              <p className='position'>Admin</p>
               <p className='visiting'>Last visit 28/10/2024</p>
               <button type="button" className='logout__btn'>Log Out</button>
             </div>
         </div>
-        <ul id="user__menu__box">
+        <ul id="admin__menu__box">
           {
             user__menu.map((item,i) => (
-              <li  key={i}><Link className="menu__item" to={item.path}><i>{<item.icon/>} </i><span>{item.name}</span></Link></li>
+              <li  key={i}><Link className="menu__item" to={item.path}><i>{<item.icon/>} <b className='extra__icon'>{ item.eicon && <item.eicon/>}</b> </i><span>{item.name}</span></Link></li>
             ))
           }
         </ul>
@@ -91,4 +111,4 @@ const UserDashboardMenu = () => {
   )
 }
 
-export default UserDashboardMenu
+export default AdminDashboardMenu

@@ -54,6 +54,7 @@ import UpdateAdminProfile from "./pages/admin/update_profile/UpdateProfile";
 import Orders from "./pages/user/orders/Orders";
 import UserProfile from "./pages/user/profile/Profile";
 import UpdateUserProfile from './pages/user/update_profile/UpdateProfile';
+import OrderDetails from './pages/user/order__details/OrderDetails';
 
 
 
@@ -90,13 +91,14 @@ function App() {
         <Route path='/admin-profile' element={<AdminProfile/>}/>
         <Route path='/admin-update-profile' element={<UpdateAdminProfile/>}/>
         <Route path='/create-product' element={<CreateProduct/>}/>
-        <Route path='/update-products' element={<UpdateProduct/>}/>
+        <Route path='/update-product' element={<UpdateProduct/>}/>
         <Route path='/all-products' element={<AllProducts/>}/>
         <Route path='/create-category' element={<CreateCategory/>}/>
         <Route path='/all-orders' element={<AllOrders/>}/>
 
         {/* ====== User Dashboard Page ======= */}
         <Route path='/orders' element={<Orders/>}/>
+        <Route path='/order-details' element={<OrderDetails/>} />
         <Route path='/user-profile' element={<UserProfile/>}/>
         <Route path='/user-update-profile' element={<UpdateUserProfile/>}/>
         <Route path='*' element={<Error/>}/>

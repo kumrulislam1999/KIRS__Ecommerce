@@ -27,10 +27,10 @@
                 }
             }
             .edit__profile__btn{
-                @include icon__lg($bg__color:transparent,$color:$teal__color,$b__color:$teal__color,$b__radius:50%);
                 position: absolute;
                 top:30px;
                 right: 30px;
+                @include icon__lg($bg__color:transparent,$color:$teal__color,$b__color:$teal__color,$b__radius:50%);
                 &:hover{
                     @include hover($color:$white__color,$bg__color:$teal__color);
                 }

@@ -31,6 +31,7 @@
 @import "./components/hero__section/hero__bannar";
 @import "./components/mini__bannar/mini__bannar";
 @import "./components//product__card/prodcut__card";
+@import "./components/edit__product__card/edit__product__card";
 @import "./components/product__card__line/product__card__line";
 @import "./components/getup__section/getup__section";
 @import "./components/deal__section//deal__section";
@@ -42,6 +43,9 @@
 @import "./components/add__to__card/add__to__card";
 @import "./components/your__order/your__order";
 @import "./components/user__dashboard__menu/user__dashboard__menu";
+@import "./components/admin__dashboard__menu/admin__dashboard__menu";
+@import "./components/admin__orders__list/admin__orders__list";
+@import "./components/user__order__list/user__order__list";
 /* --=======================================
     End Import Components SCSS Here 
 ========================================-- */
@@ -81,6 +85,7 @@
 @import "./pages/user/orders/orders";
 @import "./pages/user/profile/profile";
 @import "./pages/user/update_profile/update_profile";
+@import "./pages/user/order__details/user__order__details";
 
 /* ===== Admin Dashboard Pages ===== */
 @import "./pages/admin/all_products/all_products";

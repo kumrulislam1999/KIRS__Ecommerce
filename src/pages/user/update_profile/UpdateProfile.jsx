@@ -22,11 +22,11 @@ import UserDashboardMenu from "../../../components/user__dashboard__menu/UserDas
 
 const UpdateProfile = () => {
   return (
-    <Layout title={"Profile"}>
+    <Layout title={"Update Profile"}>
       <div id="update__user__profile__page">
 
         { /* ========= Start Page Bannar Section Here ========= */}
-          <PageBannar title={"Profile"}/>
+          <PageBannar title={"Update Profile"}/>
         { /* ========= End Page Bannar Section Here ========= */}
 
 
@@ -36,12 +36,10 @@ const UpdateProfile = () => {
             <div className="sec__mar">
               <div className="container">
                 <div className="row justify-content-between g-0">
-                  <div className="col-md-4 col-lg-3">
-                    <div id="user__menu__box">
+                  <div className="col-12 col-lg-3">
                       <UserDashboardMenu/>
-                    </div>
                   </div>
-                  <div className="col-md-8 col-lg-9">
+                  <div className="col-12 col-lg-9">
                     <div id="user__content__box">
                       <h4>Update Profile Details</h4>
                       <form action="" className='form__box'>
@@ -74,6 +72,12 @@ const UpdateProfile = () => {
                             <div className="input__group">
                               <label htmlFor="password">Password</label>
                               <input type="password" name="password" id="password" placeholder='Password' disabled />
+                            </div>
+                          </div>
+                          <div className="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-4">
+                            <div className="input__group">
+                              <label htmlFor="status">Status</label>
+                              <input type="text" name="status" id="status" placeholder='Admin' disabled />
                             </div>
                           </div>
                           <div className="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-4">
